@@ -1,0 +1,13 @@
+{
+    "name": "R Development",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ikuyadeu.r"
+    ],
+    "postCreateCommand": "echo 'Environment setup complete!'"
+}
