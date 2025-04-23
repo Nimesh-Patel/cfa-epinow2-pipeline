@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">CFAEpiNow2Pipeline</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,20 +35,37 @@
 <h2 class="pkg-version" data-toc-text="0.2.0" id="cfaepinow2pipeline-v020">CFAEpiNow2Pipeline v0.2.0<a class="anchor" aria-label="anchor" href="#cfaepinow2pipeline-v020"></a></h2>
 <div class="section level3">
 <h3 id="features-0-2-0">Features<a class="anchor" aria-label="anchor" href="#features-0-2-0"></a></h3>
-<ul><li>Building with ubuntu-latest and using Container App runner for all else, remove azure-cli action</li>
+<ul><li>Editing of <code>SOP.md</code>
+</li>
+<li>Pin r-version at 4.4.3 for CI/CD</li>
+<li>Fix minor typos in <code>SOP.md</code>.</li>
+<li>Swap from <code>Dockerfile-batch</code> to using an inline-metadata script, managed by <code>uv</code>.</li>
+<li>Adding dynamic logic to re-query for configs in blob</li>
+<li>Automate creation of outlier csv for nssp-elt-2/outliers</li>
+<li>Fix ‘latest’ tag for CI</li>
+<li>Updated path for read/write of data outliers</li>
+<li>Updating makefile to represent unified Dockerfile approach (not two-step build)</li>
+<li>Make sure we change “COVID-19/Omicron” to “COVID-19” when reading NSSP data.</li>
+<li>Unified Dockerfile</li>
+<li>Add instructions for data outliers reruns to the SOP.</li>
+<li>Add ability to call <code>make rerun-prod</code> to rerun just the tasks that needed a data change.</li>
+<li>Add output container as a new field in the config file.</li>
+<li>Building with ubuntu-latest and using Container App runner for all else, remove azure-cli action</li>
 <li>Adding exclusions documentation and Makefile support</li>
 <li>Add the blob storage container, if provided</li>
 <li>Adding make command to test Azure batch</li>
 <li>Updating subnet ID and pool VM to 22.04 from 20.04</li>
 <li>Write model diagnostics to an output file, correcting an oversight</li>
 <li>Refactored GH Actions container build to cfa-actions 2-step build</li>
-<li>Creating SOP.md to document weekly run procedures</li>
+<li>Creating SOP.md to document weekly run procedures, including diagram</li>
 <li>Allows unique job_ids for runs.</li>
 <li>Makefile supports either docker or podman as arguments to setup &amp; manage containers</li>
 <li>Streamlined configurable container execution provided by included start.sh script</li>
 <li>Container App Job execution tools added including job-template.yaml file for single task and Python script for bulk tasks</li>
 <li>GitHub Actions workflow added to start Azure Container App Job</li>
-<li>Minor changes in removing unused container tags from Azure CR.</li>
+<li>Minor changes in removing unused container tags from Azure CR</li>
+<li>Reactivated DEBUG level logs from EpiNow2 so that sampler progress is visible</li>
+<li>Added new test data and unit tests for point exclusions</li>
 </ul></div>
 </div>
     <div class="section level2">
